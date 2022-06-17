@@ -4,7 +4,7 @@ pages:
   cache:
     key:
       files:
-        - yarn.json
+        - yarn.lock
       prefix: yarn
     paths:
       - node_modules/
