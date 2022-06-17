@@ -18,8 +18,6 @@ export default defineConfig(({ command, mode }) => {
       open: false,
       port: 3000,
     },
-    base: {
-      base: env.VITE_ASSET_BASE
-    }
+    base: env.VITE_ASSET_BASE
   }
 })
