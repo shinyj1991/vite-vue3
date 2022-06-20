@@ -2,7 +2,7 @@ import { routes } from '@/helpers/routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.VITE_ASSET_BASE),
   routes,
 })
 
