@@ -22,6 +22,6 @@ export default defineConfig(({ command, mode }) => {
     },
     // root: env.VITE_ASSET_BASE,
     base: env.VITE_ASSET_BASE,
-    publicDir: env.VITE_ASSET_BASE
+    // publicDir: env.VITE_ASSET_BASE
   }
 })
