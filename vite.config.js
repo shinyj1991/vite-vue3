@@ -5,8 +5,6 @@ import { resolve } from 'path'
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
 
-  console.log(env.VITE_ASSET_BASE);
-
   return {
     plugins: [vue()],
     resolve: {
@@ -20,8 +18,6 @@ export default defineConfig(({ command, mode }) => {
       open: false,
       port: 1111,
     },
-    // root: env.VITE_ASSET_BASE,
-    base: env.VITE_ASSET_BASE,
-    // publicDir: env.VITE_ASSET_BASE
+    base: env.VITE_BASE_ROOT,
   }
 })

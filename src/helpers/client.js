@@ -10,19 +10,12 @@ const axiosConfig = {
 
 const axiosClient = axios.create(axiosConfig);
 
-const request = async (
-  method,
-  path,
-  params = null,
-  data = null,
-  config = null
-) => {
+const request = async (method, url, params, data) => {
   config = {
     method,
-    url: path,
+    url,
     params,
     data,
-    ...config,
     headers: authHeader(cookie.get('Token'))
   };
   const response = await axiosClient.request(config);
@@ -38,10 +31,10 @@ const authHeader = (authToken) => {
 }
 
 const client = {
-  get: async (path, params = null) => await request('GET', path, params, null),
-  post: async (path, data = null) => await request('POST', path, null, data),
-  put: async (path, data = null) => await request('PUT', path, null, data),
-  delete: async (path, data = null) => await request('DELETE', path, null, data),
+  get: async (url, params = null) => await request('GET', url, params, null),
+  post: async (url, data = null) => await request('POST', url, null, data),
+  put: async (url, data = null) => await request('PUT', url, null, data),
+  delete: async (url, data = null) => await request('DELETE', url, null, data),
 };
 
 export default client;
