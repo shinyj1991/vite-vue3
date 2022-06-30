@@ -3,7 +3,6 @@
 
 <template>
   <header class="the-header">
-    <p>Header</p>
     <router-link to="/">home</router-link>
     <router-link to="/swiper">swiper</router-link>
   </header>

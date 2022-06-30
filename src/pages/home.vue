@@ -20,9 +20,6 @@ const state = reactive({
       <button type="button" @click="state.isPopupVisible = true">팝업 오픈</button>
       <popup-example v-model:isVisible="state.isPopupVisible" />
     </section>
-    <section>
-      <p>자동배포 테스트</p>
-    </section>
   </div>
 </template>
 
