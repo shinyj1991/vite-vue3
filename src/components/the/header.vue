@@ -5,6 +5,7 @@
   <header class="the-header">
     <router-link to="/">home</router-link>
     <router-link to="/swiper">swiper</router-link>
+    <router-link to="/button">button</router-link>
   </header>
 </template>
 
