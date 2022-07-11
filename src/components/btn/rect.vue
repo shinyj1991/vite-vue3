@@ -1,11 +1,5 @@
 <script setup>
-import { reactive, ref } from 'vue';
-
 const props = defineProps({
-  big: {
-    type: Boolean,
-    default: false,
-  },
   tag: {
     type: String,
     default: 'button'
@@ -26,19 +20,15 @@ const rippleEffect = e => {
 
   const ripple = button.getElementsByClassName('ripple')[0];
 
-  if (ripple) {
-    ripple.remove();
-  }
-
+  if (ripple) ripple.remove()
   button.appendChild(circle);
 }
 </script>
 
 <template>
   <component 
-    ref="btnRect"
     class="btn-rect"
-    :is="tag"
+    :is="props.tag"
     @click="rippleEffect"
   >
     <slot />
@@ -74,7 +64,7 @@ const rippleEffect = e => {
   }
   .ripple {
     display: block;
-    position: absolute; /* The absolute position we mentioned earlier */
+    position: absolute;
     border-radius: 50%;
     transform: scale(0);
     animation: ripple 600ms linear;
